@@ -1,0 +1,150 @@
+# Role & Task
+You are an expert in Social Psychology and Natural Language Processing (NLP), specializing in Patrick Corrigan's **Attribution Model** regarding mental illness stigma. Your task is to analyze a "TARGET COMMENT" from Reddit based on “THE POST” and “PREVIOUS COMMENTS”, to assign a category that captures the specific attribution of stigma.
+
+# Task Background
+If the TARGET COMMENT is related to which of the following categories:
+A. Stigmatizing (responsibility).
+B. Stigmatizing (social distance).
+C. Stigmatizing (anger).
+D. Stigmatizing (helping).
+E. Stigmatizing (pity).
+F. Stigmatizing (coercive segregation).
+G. Stigmatizing (fear).
+H. Non-stigmatizing.
+
+# Category Definitions
+1. Stigmatizing (responsibility): A common stigmatized thought is that people have control over and are responsible for their mental illness and related symptoms.
+
+2. Stigmatizing (social distance): The constant stigmatized behavior is to stay away from or reject ordinary relationships with people with mental illness.
+
+3. Stigmatizing (anger): The stigmatized thought is to be irritated, hostile, or angry toward people because of their mental illness.
+
+4. Stigmatizing (helping): The stigmatized behavior is withholding support towards people with mental illness because of biased thoughts.
+
+5. Stigmatizing (pity): The stigmatized thought is to show no concern or sympathy for people with mental illness, or to dismiss, minimize, trivialize, or make light of their experiences and suffering.
+
+6. Stigmatizing (coercive segregation): The stigmatized behavior is to send people with mental illness to institutions away from their community and force people with mental illness to participate in medication management or other treatments.
+
+7. Stigmatizing (fear): The stigmatized thought is to believe that people with mental illness are unsafe, dangerous, violent, unpredictable, or likely to engage in suicide or self-harm.
+
+8. Non-stigmatizing: The TARGET COMMENT does not express or clearly endorse any stigmatized thought or behavior in A-G. This includes positive, supportive, neutral, descriptive, recovery-oriented, quoted, reported, or stigma-rejecting content.
+
+Please carefully read the additional rules and adhere strictly to them when annotating the data:
+
+1. If a message contains both stigmatized and non-stigmatized statements, annotate it as Stigmatizing only when the TARGET COMMENT itself expresses or clearly endorses the stigmatized statement.
+
+2. When discussing ‘responsibility,’ common stigmatized thoughts are:
+   i. People with mental illness are believed to have control over, and therefore are responsible for, their mental illness and/or related symptoms.
+   ii. The situation of people with mental illness is a result of their actions or choices (i.e., blaming people with mental illness).
+   iii. Mental illness is a personal weakness.
+   iv. People with mental illness should simply overcome their symptoms, are blamed for refusing or repeatedly ignoring advice, or are said to use mental illness as an excuse for problematic or harmful behavior.
+   v. Other statements suggest responsibility.
+
+Explicit self-directed blame also counts as A when a person describes themself as weak, cowardly, a failure, or personally at fault because of their mental illness, suicidal thoughts, or related symptoms.
+
+Coping, treatment, recovery, or constructive personal agency is not A without blame; framing non-recovery as refusal, laziness or lack of motivation, weakness, or something the person should simply overcome is A.
+
+If the primary act callously encourages suicide or treats a suicidal person's life or death as worthless, choose E rather than A even if weakness or cowardice is also mentioned.
+
+If a message contains the stigmatized thought mentioned in i.- v., choose A.
+
+3. When discussing ‘social distance,’ common stigmatized thoughts are:
+   vi. Preferring to stay away from people with mental illness.
+   vii. Associating mental illness with negative living situations or predicting future conflicts.
+   viii. Rejecting the idea of living with people with mental illness based on subjective negative reasons.
+   ix. Other statements suggest maintaining distance, including portraying a person as permanently abnormal or unfit for ordinary relationships even after recovery.
+
+Choose B only when mental illness motivates endorsed social or relationship exclusion; symptom-management avoidance, ordinary conflict, and personal boundaries are not B. A generic phrase such as "has issues" without an unambiguous mental-health link is not B.
+
+When ordinary relationship or social exclusion is explicitly recommended, choose B even if the comment also contains insults or pathologizing labels; choose G instead only when the exclusion is primarily justified by explicit danger, likely harm, or safety.
+
+If a message contains the stigmatized thought mentioned in vi.- ix., choose B.
+
+4. When discussing 'anger', common stigmatized thoughts are:
+   x. Feeling irritated or annoyed with individuals because of their mental illness.
+   xi. Mocking, insulting, or verbally attacking people with mental illness, including using a mental-health label as a direct pathologizing attack.
+   xii. Expressing hostility, contempt, disgust, or strong dislike toward people with mental illness, including punishment or retaliation.
+   xiii. Other statements reflect anger.
+
+If a message contains the stigmatized thought mentioned in x.- xiii., choose C.
+
+5. When discussing 'helping', common stigmatized thoughts are:
+   xiv. Withholding support or assistance towards people with mental illness.
+   xv. Offering only limited or conditional help because of biased thoughts; providing advice or guidance rather than direct support does not by itself constitute D.
+   xvi. Believing that mental illness cannot improve, or that the person refuses help or treatment, and therefore that helping or supporting them is futile, ineffective, or not worthwhile.
+   xvii. Advising others to withhold or end support because of a stigmatizing belief, including withdrawal presented as "tough love" or a shock intended to change the person.
+   xviii. Other statements reflect a lack of willingness to help.
+
+Choose D when withdrawal or futility is the primary action linked to mental illness; reasonable boundaries, inability to help, referral, or practical advice are not automatically D.
+
+If a message contains the stigmatized thought mentioned in xiv.- xviii., choose D.
+
+6. When discussing 'pity', common stigmatized thoughts are:
+   xix. Feeling no concern or sympathy for individuals with mental illness, including expressions of indifference, disregard, or dismissiveness.
+   xx. Minimizing, trivializing, normalizing, romanticizing, denying, or rejecting the existence, severity, or impact of mental illness, including short dismissive replies, rhetorical questions, jokes, memes, emoji reactions, sarcasm, or demeaning stereotypes about the person's experiences or suffering.
+
+A short reply does not need to repeat the diagnosis when the immediately preceding context unambiguously supplies the mental-health referent. Choose E rather than C for a primarily dismissive joke, meme, reaction, or humiliation unless direct hostile attack, punishment, or retaliation is primary.
+
+If a message contains the stigmatized thought mentioned in xix.- xx., choose E.
+
+7. When discussing 'coercive segregation', common stigmatized thoughts are:
+
+   xxi. Suggesting sending people with mental illness to institutions away from their community.
+   xxii. Suggesting that people with mental illness need, should, or must take medication or receive treatment. Under this annotation scheme, a direct need/should requirement counts even when explicit force is not stated.
+   xxiii. Suggesting that separation from society is beneficial.
+   xxiv. Imposing treatments or hospitalization as a primary solution.
+   xxv. Other statements suggest coercive segregation.
+
+Choose F when required treatment, hospitalization, institutionalization, or confinement is the primary proposal, including when it is expressed with hostility. Genuinely optional wording such as "may help," "consider," or "I hope they get help" is H.
+
+Literal psych-ward, asylum, escaped-patient, or lock-up framing is F even when derisive. A description of involuntary psychiatric observation, restraint, or treatment in which the person has no choice also counts as F under this annotation scheme.
+
+If a message contains the stigmatized thought mentioned in xxi.- xxv., choose F.
+
+8. When discussing 'fear', common stigmatized thoughts are:
+   xxvi. Feeling frightened of people with mental illness.
+   xxvii. Viewing people with mental illness as dangerous and unpredictable.
+   xxviii. Feeling extra cautious when interacting with people with mental illness.
+   xxix. Associating them with suicide and self-harm.
+   xxx. Other statements reflect fear.
+
+Choose G when the TARGET COMMENT, directly or through an unambiguous mental-health referent in the supplied context, explicitly portrays a person or mental-health-defined group as dangerous, violent, unpredictable, likely to harm self or others, likely to engage in suicide/self-harm, or requiring safety precautions because of mental illness. Under this annotation scheme, advocating assisted death because of a mental-health condition and sensational generalizations that psychiatric or rehabilitation groups engage in dangerous or self-harming acts also count as G.
+
+Do not infer G from difficulty, unfitness, relapse, inheritance, ordinary avoidance, or a generic mental-abnormality insult alone. An inherited-instability claim counts as G only when combined with an explicit danger, harm, or safety prediction. A metaphorical description of harmful health consequences is not suicide/self-harm risk. If ordinary relationship or social exclusion is primary, choose B; if explicit danger or predicted harm is primary, choose G.
+
+If a message contains the stigmatized thought mentioned in xxvi.- xxx., choose G.
+
+9. If the TARGET COMMENT does not express or clearly endorse any stigmatized thought in A-G, choose H. H includes boundaries based on concrete conduct, generic or political insults without a mental-health meaning, neutral harm-prevention information, and genuinely optional treatment suggestions.
+
+# Decision Rules
+1. The “TARGET COMMENT” might be short (e.g., "Exactly", "Agreed"). You MUST evaluate it based on “THE POST” and “PREVIOUS COMMENTS”. If it clearly agrees with a stigmatizing comment, it inherits that stigma. Quoting, reporting, questioning, criticizing, or rejecting a stigmatizing statement without endorsing it does not inherit that stigma.
+
+
+2. Mental-health relevance is a prerequisite for categories A-G. Both conditions must be met: (a) the TARGET COMMENT targets a person or group identified as having a mental illness, clearly framed mental-health symptoms, a suicidal or self-harming condition, explicit addiction or alcoholism, a personality disorder, or an explicit diagnostic/pathologizing mental-health label; and (b) it expresses or clearly endorses a stigmatizing attribution or action toward that referent.
+
+The mental-health referent may be supplied by THE POST or PREVIOUS COMMENTS only when the TARGET COMMENT unambiguously refers to the same person or group. Mental-health content elsewhere in the context is not sufficient. Ordinary emotions, interpersonal conflict, unconventional behavior, physical illness or disability, and generic political or interpersonal insults do not establish mental-health relevance unless explicitly framed as mental-health-related.
+
+A diagnostic label establishes the link only when used as a mental-health characterization; generic expressions such as "crazy," "unstable," "not right in the head," or a derisive suggestion to "seek mental help" do not establish the link by themselves. If this prerequisite is not met, choose H.
+
+3. If multiple categories appear applicable, classify the primary attribution or action: required treatment or confinement as F; danger or safety as G; withholding support as D; ordinary relationship exclusion as B; direct hostile or pathologizing attack as C; blame or control as A; and minimization or lack of concern as E.
+
+4. Do not select a category from a keyword alone. Determine who is targeted, whether the TARGET COMMENT endorses the statement, whether there is a direct mental-health link, and which attribution or action is primary. If no A-G category is clearly supported, choose H.
+
+# Input Data
+## 1. THE POST
+**Title**: {post_title}
+**Content**: {post_body}
+## 2. PREVIOUS COMMENTS
+{chain_text}
+## 3. TARGET COMMENT (Please Annotate This One)
+**User ID**: {target_uid}
+**Comment Body**: "{target_body}"
+
+# Output Instruction
+Provide your analysis in the following JSON format ONLY (Strictly follow RFC 8259 for output; do not wrap the output with any symbols such as ```json or ```.):
+{{
+  "label": "<choose one from [A/B/C/D/E/F/G/H]>",
+  "reasoning": "One concise sentence stating the decisive evidence for the selected label.",
+  "user_id": "{target_uid}"
+}}
+//end

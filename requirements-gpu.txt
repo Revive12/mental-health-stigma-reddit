@@ -1,0 +1,4 @@
+-r requirements.txt
+# Install a PyTorch build compatible with your CUDA driver before GPU inference.
+torch>=2.2
+transformers>=4.44

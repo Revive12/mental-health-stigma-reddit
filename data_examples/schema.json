@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fictional annotation examples",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "example_id",
+    "data_type",
+    "purpose",
+    "post_context",
+    "previous_comments",
+    "target_comment",
+    "illustrative_label",
+    "illustrative_reason",
+    "human_validation_status"
+  ],
+  "properties": {
+    "example_id": {
+      "type": "string",
+      "pattern": "^EX[0-9]{4}$"
+    },
+    "data_type": {
+      "const": "synthetic"
+    },
+    "purpose": {
+      "const": "annotation_schema_demonstration"
+    },
+    "post_context": {
+      "type": "object",
+      "required": [
+        "title",
+        "body"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "body": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "previous_comments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/comment"
+      }
+    },
+    "target_comment": {
+      "$ref": "#/$defs/comment"
+    },
+    "illustrative_label": {
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ]
+    },
+    "illustrative_reason": {
+      "type": "string"
+    },
+    "human_validation_status": {
+      "const": "not_performed"
+    }
+  },
+  "$defs": {
+    "comment": {
+      "type": "object",
+      "required": [
+        "speaker_id",
+        "text"
+      ],
+      "properties": {
+        "speaker_id": {
+          "type": "string",
+          "pattern": "^S[0-9]{2}$"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
